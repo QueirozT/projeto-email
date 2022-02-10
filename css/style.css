@@ -223,6 +223,10 @@ html, body{
     cursor: pointer;
 }
 
+.msg ~ .destaque:hover {
+    background: rgba(23, 78, 166, 0.8);
+}
+
 .msg h2 {
     font-size: 1rem;
     font-weight: bold;
@@ -342,7 +346,7 @@ svg:hover {
     border: 2px solid whitesmoke;
     font-weight: bolder;
 
-    background: rgba(0, 0, 0, 0.2);
+    background:rgba(23, 78, 166, 0.6);
 }
 
 .seta {
