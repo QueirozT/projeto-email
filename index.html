@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>E-mail - Caixa de Entrada</title>
+</head>
+<body class="container">
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <section class="menu">
+            <abbr title="Menu Principal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list menu" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg> 
+            </abbr>
+
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 64 64" style=" fill:#000000;">
+                    <linearGradient id="SVGID_1__l8GURTKU12XE_gr1" x1="14" x2="14" y1="16.447" y2="24.493" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#8cc5fc"></stop>
+                      <stop offset="1" stop-color="#d5a8fb"></stop>
+                    </linearGradient>
+                
+                    <path fill="url(#SVGID_1__l8GURTKU12XE_gr1)" d="M18.9,17.8l-3.5-2.5c-1.6-0.7-3.5-0.5-4.8,0.7c-1,1-1.6,2.3-1.6,3.9v3.6l10,7.4V18.5L18.9,17.8L18.9,17.8z"></path>
+                
+                    <linearGradient id="SVGID_2__l8GURTKU12XE_gr2" x1="50" x2="50" y1="16.447" y2="24.493" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#8cc5fc"></stop>
+                        <stop offset="1" stop-color="#d5a8fb"></stop>
+                    </linearGradient>
+                
+                    <path fill="url(#SVGID_2__l8GURTKU12XE_gr2)" d="M55,23.5v-3.6c0-1.5-0.6-2.8-1.6-3.8c0,0,0,0,0,0c-1.5-1.5-3.9-1.5-5.5-0.3l-2.7,2l0,0L45,18.5v12.4L55,23.5z"></path>
+                    
+                    <linearGradient id="SVGID_3__l8GURTKU12XE_gr3" x1="32" x2="32" y1="12.957" y2="49.383" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#1a6dff"></stop>
+                        <stop offset="1" stop-color="#c822ff"></stop>
+                    </linearGradient>
+                    
+                    <path fill="url(#SVGID_3__l8GURTKU12XE_gr3)" d="M54.1,15.3c-1.8-1.8-4.7-1.9-6.8-0.4l-2.7,2c0,0,0,0,0,0L32,26.3L19.5,17c0,0,0,0,0,0c0,0,0,0,0,0l-2.7-2	c-2.1-1.6-5-1.4-6.8,0.4C8.7,16.6,8,18.2,8,19.9v26.7c0,1.9,1.6,3.5,3.5,3.5H19c0.6,0,1-0.4,1-1V32.9l11.4,8.4	c0.2,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2L44,32.9v16.2c0,0.6,0.4,1,1,1h7.5c2.1,0,3.5-1.3,3.5-3.1V19.9	C56,18.2,55.3,16.6,54.1,15.3z M10,19.9c0-1.2,0.5-2.3,1.3-3.1c0.6-0.6,1.4-0.9,2.2-0.9c0.7,0,1.4,0.2,2.1,0.7l2.5,1.8	c0,0,0,0.1,0,0.1v10.4L10,23V19.9z M11.5,48.1c-0.8,0-1.5-0.7-1.5-1.5V25.5l8,5.9V40h-3v2h3v2h-5v2h5v2.1H11.5z M44,30.4l-12,8.9	l-12-8.9V19.9l11.4,8.4c0.2,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2L44,19.9V30.4z M48.5,16.6c1.3-1,3.1-0.9,4.3,0.2	c0.8,0.8,1.3,1.9,1.3,3.1V23l-8,5.9V18.5c0,0,0-0.1,0-0.1L48.5,16.6z M52.5,48.1H46V31.4l8-5.9V40h-3v2h3v2h-5v2h5v1	C54,48,53,48.1,52.5,48.1z"></path>
+                </svg>
+
+            <p>E-Mail</p>
+        </section>
+
+        <section class="busca">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+
+                <input type="search" name="" id="">
+            </div>
+        </section>
+
+        <section class="perfil">
+            <abbr title="Perfil">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg>
+            </abbr>
+        </section>
+    </header>
+
+    <!-- NAVEGAÇÃO -->
+    <aside class="navegacao">
+        <section class="novo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+            
+            <p>Escrever</p>
+        </section>
+
+        <section class="entrada">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" style=" fill:#000000;">
+                <path d="M 9 7 C 8.570313 7 8.1875 7.273438 8.050781 7.683594 L 2.050781 25.683594 C 2.015625 25.785156 2 25.890625 2 26 L 2 41 C 2 41.554688 2.445313 42 3 42 L 47 42 C 47.554688 42 48 41.554688 48 41 L 48 26.019531 C 48 26.011719 48 26.007813 48 26 C 48 25.890625 47.984375 25.785156 47.949219 25.683594 L 41.949219 7.683594 C 41.8125 7.273438 41.429688 7 41 7 Z M 9.71875 9 L 40.28125 9 L 45.609375 25 L 32 25 C 31.445313 25 31 25.445313 31 26 C 31 29.308594 28.308594 32 25 32 C 21.691406 32 19 29.308594 19 26 C 19 25.445313 18.554688 25 18 25 L 4.390625 25 Z">
+            </svg>
+
+            <p>Caixa de Entrada</p>
+        </section>
+
+        <section class="todos">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" style=" fill:#000000;">
+                <path d="M 5.5 7 C 3.019531 7 1 9.019531 1 11.5 L 1 11.925781 L 25 29 L 49 11.925781 L 49 11.5 C 49 9.019531 46.980469 7 44.5 7 Z M 6.351563 9 L 43.644531 9 L 25 22 Z M 1 14.027344 L 1 38.5 C 1 40.980469 3.019531 43 5.5 43 L 44.5 43 C 46.980469 43 49 40.980469 49 38.5 L 49 14.027344 L 43 18.296875 L 43 41 L 7 41 L 7 18.296875 Z">
+            </svg>
+
+            <p>Todos os Emails</p>
+        </section>
+
+        <section class="com-estrela">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+            <p>Com Estrela</p>
+        </section>
+
+        <section class="adiados">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+              </svg>
+            <p>Adiados</p>
+        </section>
+
+        <section class="enviados">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+              </svg>
+            <p>Enviados</p>
+        </section>
+
+        <section class="rascunho">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
+                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+              </svg>
+            <p>Rascunho</p>
+        </section>
+
+        <section class="span">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+              </svg>
+            <p>Span</p>
+        </section>
+
+        <section class="lixeira">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24" style=" fill:#000000;">    
+                <path d="M 10 2 L 9 3 L 4 3 L 4 5 L 20 5 L 20 3 L 15 3 L 14 2 L 10 2 z M 5 7 L 5 20 C 5 21.1 5.9 22 7 22 L 17 22 C 18.1 22 19 21.1 19 20 L 19 7 L 5 7 z M 8 9 L 10 9 L 10 20 L 8 20 L 8 9 z M 14 9 L 16 9 L 16 20 L 14 20 L 14 9 z">
+                </svg>
+            <p>Lixeira</p>
+        </section>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="conteudo">
+        <section class="conteudo-cabecalho">
+            <div class="esquerda">
+                <div class="checkbox">
+                    <abbr title="Selecionar Todos os E-mails">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-square em-um" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" onclick="swithHiddenAll()" width="20" height="20" fill="currentColor" class="bi bi-check-lg em-um hidden box" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                          </svg>
+                    </abbr>
+                </div>
+                
+                <div class="reload">
+                    <abbr title="Recarregar">
+                        <svg xmlns="http://www.w3.org/2000/svg" onclick="recarregar()" width="20" height="20" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                        </svg>
+                    </abbr>
+                </div>
+            </div>
+
+            <div class="direita">
+                <p>1-5 de 1</p> 
+                
+                <div class="voltar">
+                    <abbr title="Pagina Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left em-um base" viewBox="0 0 16 16">
+                            <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill em-um seta" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                          </svg>
+                    </abbr>
+                </div>
+
+                <div class="avancar">
+                    <abbr title="Próxima Página">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right em-um base" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill em-um seta" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                    </abbr>
+                </div>
+            </div>
+        </section>
+
+        <section class="mensagens">
+            <article class="msg">
+                <div class="corpo">
+                    <div class="check-box">
+                        <abbr title="Selecionar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-square em-um base" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg em-um hidden" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    
+                    <div class="estrela">
+                        <abbr title="Adicionar Estrela">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star em-um base" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill em-um hidden star" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    <h1>Lorem Ipsum</h1>
+                    
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas velit soluta laborum aliquid debitis ducimus modi, itaque accusantium molestiae atque aperiam sit vel placeat delectus pariatur iure! Numquam, amet labore.</p>
+                </div>
+
+                <h2>12:00</h2>
+            </article>
+
+            <article class="msg">
+                <div class="corpo">
+                    <div class="check-box">
+                        <abbr title="Selecionar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-square em-um base" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg em-um hidden" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    
+                    <div class="estrela">
+                        <abbr title="Adicionar Estrela">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star em-um base" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill em-um hidden star" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    <h1>Lorem Ipsum</h1>
+                    
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, repudiandae nostrum. Earum facere cum quam corrupti dolores ipsum tempore repellendus perferendis, debitis quidem quos officiis ratione architecto distinctio maiores eos!</p>
+                </div>
+
+                <h2>08:00</h2>
+            </article>
+
+            <article class="msg">
+                <div class="corpo">
+                    <div class="check-box">
+                        <abbr title="Selecionar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-square em-um base" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg em-um hidden" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    
+                    <div class="estrela">
+                        <abbr title="Adicionar Estrela">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star em-um base" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill em-um hidden star" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    <h1>Lorem Ipsum</h1>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum aliquam aperiam ex itaque nihil minima velit at voluptatum saepe impedit sint magnam, nobis perspiciatis, quasi consectetur repellat in a!</p>
+                </div>
+
+                <h2>8 de fev.</h2>
+            </article>
+
+            <article class="msg">
+                <div class="corpo">
+                    <div class="check-box">
+                        <abbr title="Selecionar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-square em-um base" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg em-um hidden" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    
+                    <div class="estrela">
+                        <abbr title="Adicionar Estrela">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star em-um base" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill em-um hidden star" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    <h1>Lorem Impsum Dolor Sit Amet Consectetur</h1>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur natus quasi delectus est fugiat? Eum itaque obcaecati adipisci, ducimus veniam numquam nesciunt quidem necessitatibus! Error aspernatur culpa eius cum tenetur!</p>
+                </div>
+
+                <h2>2 de fev.</h2>
+            </article>
+
+            <article class="msg">
+                <div class="corpo">
+                    <div class="check-box">
+                        <abbr title="Selecionar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-square em-um base" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg em-um hidden" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    
+                    <div class="estrela">
+                        <abbr title="Adicionar Estrela">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star em-um base" viewBox="0 0 16 16">
+                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill em-um hidden star" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>
+                        </abbr>
+                    </div>
+                    <h1>Lorem Ipsum</h1>
+                    
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, vero magni! Nostrum, sequi labore? Hic officia voluptate obcaecati. Dolores ex possimus molestiae qui atque. Repellendus error ex asperiores quaerat illo.</p>
+                </div>
+
+                <h2>28 de jan.</h2>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por <a href="https://github.com/QueirozT" target="_blank">Tiago</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
