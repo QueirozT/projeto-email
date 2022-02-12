@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+
+
+:root {
+    --cor-preto: #000000;
+    --cor-cinza1: #394141;
+    --cor-cinza2: #3A3A3A;
+    --cor-pardo: #9c9c9c;
+    --cor-branco: white;
+
+    --cor-fundo: rgba(241,243,244,0.24);
+
+    --font-titulo-sans: 'Open Sans', sans-serif;
+    --font-padrao-roboto: 'Roboto', sans-serif;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao-roboto);
+
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Background */
+    background: linear-gradient(160deg,  #47cbff 0%, #ff1a6a 90%) no-repeat;
+    background-attachment: fixed;
+    background-size: 200% 200%;
+
+    /* Animação do Fundo */
+    animation: fundo 5s ease-in-out alternate infinite;
+    overflow: hidden;
+}
+
+@keyframes fundo{
+    from{
+        background-position: 20% 20%;
+    }
+    to{
+        background-position: 65% 65%;
+    }
+}
+
+
+/* ÁREA DE EDIÇÃO DO CONTAINER E DESIGN DO "BROWSER" */
+
+#browser {
+    width: 80vw;
+    height: 80vh;
+    
+    border: 2px solid var(--cor-cinza1);
+    border-top: 5vh solid var(--cor-cinza1);
+    border-radius: 10px;
+
+    background: url(/projeto-email/source/Tema.jpg) center center fixed no-repeat;
+    background-size: cover;
+
+    /* ÁREA DE GRID */
+    display: grid;
+    grid-template-columns: 15vw 65vw;
+    grid-template-rows: 5vh 5vh 75vh;
+    grid-template-areas: "bar bar" "cabecalho cabecalho" "menu conteudo";
+}
+
+
+#browser-bar {
+    grid-area: bar;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 5vh;
+
+    transform: translate(0, -5vh);
+}
+
+#circle {
+    display: flex;
+}
+
+.circle {
+    margin-left: 10px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+
+.browser-title {
+    color: var(--cor-branco);
+    font-size: 1.5rem;
+}
+
+#controle {
+    display: flex;
+
+    opacity: 0;
+}
+
+
+/* Área superior do email */
+
+#cabecalho {
+    grid-area: cabecalho;
+    transform: translate(0, -5vh);
+
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom: 0.1px solid var(--cor-preto);
+}
+
+
+#cabecalho .left {
+    width: 15vw;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.left svg {
+    height: 3vh;
+
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+
+    fill: var(--cor-pardo);
+}
+
+.left img {
+    height: 4vh;
+}
+
+
+#cabecalho .center {
+    width: 55vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.center #buscar {
+    width: 20vw;
+    height: 4vh;
+
+    border-width: 0;
+    border-color: none;
+    border-radius: 10px;
+
+    padding: 3px 30px;
+    background-color: var(--cor-fundo);
+    
+    color: var(--cor-branco);
+}
+
+.center #buscar:focus {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+
+    outline: none;
+}
+.center #buscar:focus ~ svg{
+    fill: var(--cor-preto);
+}
+
+.center svg {
+    height: 2vh;
+    padding: 5px;
+    position: absolute;
+
+    fill: var(--cor-pardo);
+}
+
+
+#cabecalho .right {
+    width: 10vw;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.right img {
+    height: 4vh;
+    
+    margin: 15px;
+    border-radius: 50%;
+
+    background-color: var(--cor-pardo);
+}
+
+
+/* Área lateral esquerda do email "navegação" */
+
+#menu {
+    grid-area: menu;
+    transform: translate(0, -5vh);
+
+    border: 1px solid white;
+}
+
+
+/* Área lateral direita do email "Conteúdo" */
+
+#conteudo {
+    grid-area: conteudo;
+    transform: translate(0, -5vh);
+
+    border: 1px solid white;
+}
