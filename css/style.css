@@ -62,7 +62,7 @@ html, body {
     border-top: 5vh solid var(--cor-cinza1);
     border-radius: 10px;
 
-    background: url(/projeto-email/source/Tema.jpg) center center fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.2)), url(/projeto-email/source/Tema.jpg) center center fixed no-repeat;
     background-size: cover;
 
     /* ÁREA DE GRID */
