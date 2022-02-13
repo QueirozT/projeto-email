@@ -10,7 +10,9 @@
     --cor-pardo: #9c9c9c;
     --cor-branco: white;
 
+    --cor-fundo-branco: rgba(255, 255, 255, 0.80);
     --cor-fundo: rgba(241,243,244,0.24);
+    --cor-destaque: rgba(0, 0, 0, 0.5);
 
     --font-titulo-sans: 'Open Sans', sans-serif;
     --font-padrao-roboto: 'Roboto', sans-serif;
@@ -50,7 +52,7 @@ html, body {
 }
 
 
-/* ÁREA DE EDIÇÃO DO CONTAINER E DESIGN DO "BROWSER" */
+/* ====== ÁREA DE EDIÇÃO DO CONTAINER E DESIGN DO "BROWSER" ====== */
 
 #browser {
     width: 80vw;
@@ -118,7 +120,7 @@ html, body {
 }
 
 
-/* Área superior do email */
+/* ====== Área superior do email ====== */
 
 #cabecalho {
     grid-area: cabecalho;
@@ -240,7 +242,7 @@ html, body {
 }
 
 
-/* Área lateral esquerda do email "navegação" */
+/* ====== Área lateral esquerda do email "navegação" ====== */
 
 #menu {
     grid-area: menu;
@@ -259,8 +261,9 @@ html, body {
     justify-content: left;
     align-items: center;
 
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
     padding: 5px 12px 5px 26px;
+    margin-right: 20px;
 
     color: var(--cor-branco);
 }
@@ -278,15 +281,14 @@ html, body {
 
 
 #menu #escrever {
-    padding: 5px 20px 5px 5px;
+    padding: 5px 20px 5px 8px;
     margin: 10px;
     width: fit-content;
+    border-radius: 40px;
 
     background-color: var(--cor-branco);
-
     color: var(--cor-preto);
-
-    border-radius: 20px;
+    text-shadow: none;
 }
 #menu #escrever::before{
     content: url('https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png');
@@ -330,26 +332,378 @@ html, body {
 
 .descricao{
     position: absolute;
-    right: 0;
+    right: 20px;
     transform: translate(100%, 0);
 
     padding: 4px 5px;
-    background: var(--cor-fundo);
+    background: var(--cor-destaque);
     font-size: .8rem;
+
+    pointer-events: none;
 
     opacity: 0;
 }
 #menu section:hover .descricao {
     opacity: 1;
-    transition: .8s;
+    transition: .6s;
 }
 
 
-/* Área lateral direita do email "Conteúdo" */
+/* ====== Área lateral direita do email "Conteúdo" ====== */
 
 #conteudo {
     grid-area: conteudo;
     transform: translate(0, -5vh);
 
-    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 65vw;
+    grid-template-rows: 5vh 70vh;
+    grid-template-areas: "controles" "mensagens";
+}
+
+/* ====== Área dos controles acima das mensagens. ====== */
+#controles {
+    grid-area: controles;
+
+    color: var(--cor-branco);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#controles-left {
+    display: flex;
+    flex-direction: row;
+
+    width: 30vw;
+    height: 5vh;
+
+    justify-content: left;
+    align-items: center;
+}
+
+#selecionar-todos {
+    width: 20px;
+    height: 20px;
+
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 50%;
+
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_white_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#selecionar-todos:hover {
+    background-color: var(--cor-fundo);
+    cursor: pointer;
+}
+
+#recarregar {
+    width: 20px;
+    height: 20px;
+
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 50%;
+    
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/refresh_white_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#recarregar:hover {
+    background-color: var(--cor-fundo);
+    cursor: pointer;
+}
+
+
+#controles-left .destaque{
+    position: absolute;
+    transform: translate(-25%, 150%);
+
+    padding: 4px 5px;
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    font-size: .8rem;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+#controles-left div:hover .destaque {
+    opacity: 1;
+    transition: .6s;
+}
+
+
+#controles-right {
+    display: flex;
+    flex-direction: row;
+
+    width: 35vw;
+    height: 5vh;
+
+    justify-content: right;
+    align-items: center;
+}
+
+#controles-right #informacao {
+    font-size: 0.8rem;
+}
+
+#controles-right #voltar {
+    width: 20px;
+    height: 20px;
+
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+    
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/chevron_left_white_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#controles #voltar:hover {
+    background-color: var(--cor-fundo);
+}
+
+#controles #avancar {
+    width: 20px;
+    height: 20px;
+
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+    
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/chevron_right_white_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#controles #avancar:hover {
+    background-color: var(--cor-fundo);
+}
+
+#controles-right .destaque{
+    position: absolute;
+    transform: translate(-50%, 150%);
+
+    padding: 4px 5px;
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    font-size: .8rem;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+#controles-right div:hover .destaque {
+    opacity: 1;
+    transition: .6s;
+}
+
+
+/* ====== área das mensagens ====== */
+#emails {
+    grid-area: mensagens;
+
+    width: 65vw;
+    min-height: 70vh;
+    overflow: hidden auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Configuração individual das mensagens */
+#emails .mensagem {
+    height: 4vh;
+
+    display: grid;
+    grid-template-columns: 2vw 2vw 2vw 10vw 44vw 5vw;
+    grid-template-areas: "selecionar estrela importante titulo texto data";
+
+    align-items: center;
+    text-align: left;
+
+    background-color: var(--cor-fundo-branco);
+}
+#emails .mensagem:hover {
+    box-shadow: 2px 2px 4px var(--cor-preto);
+}
+
+#emails .selecionar {
+    grid-area: selecionar;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_black_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#emails .selecionar:hover {
+    background-color: var(--cor-fundo);
+}
+
+#emails .estrela {
+    grid-area: estrela;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/star_border_black_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#emails .estrela:hover {
+    background-color: var(--cor-fundo);
+}
+
+#emails .importante {
+    grid-area: importante;
+    
+    width: 20px;
+    height: 20px;
+
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/label_important_outline_black_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#emails .importante:hover {
+    background-color: var(--cor-fundo);
+}
+
+/* título da mensagem */
+#emails .titulo {
+    grid-area: titulo;
+
+    padding: 0 10px;
+    overflow: hidden;
+}
+#emails .titulo h1 {
+    font-size: .8rem;
+    color: var(--cor-preto);
+    
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* texto da mensagem */
+#emails .texto {
+    grid-area: texto;
+    
+    padding: 0 10px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 99% 1%;
+    grid-template-areas: "before after";
+
+    align-items: center;
+}
+#emails .texto p {
+    grid-area: before;
+    font-size: .8rem;
+    color: var(--cor-preto);
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+#emails .texto::after {
+    grid-area: after;
+    content: '...';
+}
+
+/* data da mensagem */
+#emails .data {
+    grid-area: data;
+
+    padding: 0 10px;
+    overflow: hidden;
+}
+#emails .data h2 {
+    font-size: .8rem;
+    color: var(--cor-preto);
+    padding-right: 5px;
+
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+#emails .destaque{
+    position: absolute;
+    transform: translate(-25%, 150%);
+
+    padding: 4px 5px;
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    font-size: .8rem;
+
+    pointer-events: none;
+    
+    opacity: 0;
+}
+#emails div:hover .destaque {
+    opacity: 1;
+    transition: .6s;
+}
+
+
+
+/* Rodapé */
+footer {
+    position: relative;
+    bottom: 0;
+
+    width: 100%;
+    height: 3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p, a {
+    text-decoration: none;
+    text-align: center;
+    font-size: .8rem;
+    text-shadow: 1px 1px 2px var(--cor-preto);
+
+    color: var(--cor-branco);
+}
+footer a:hover {
+    text-decoration: underline;
 }

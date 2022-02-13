@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
-    
+
     <script src="js/script.js"></script>
 
     <title>Caixa de Entrada</title>
@@ -62,7 +62,7 @@
         </header>
 
 
-        <aside id="menu"> <!-- Menu de navegação do email -->
+        <aside id="menu" style="z-index: 1"> <!-- Menu de navegação do email -->
 
             <section id="escrever">
                 
@@ -154,13 +154,498 @@
 
         </aside>
 
-        <main id="conteudo"> <!-- Área de mensagens -->
+        <main id="conteudo" style="z-index: 0"> <!-- Área de mensagens -->
+
+            <section id="controles"> <!-- Controles -->
+                
+                <div id="controles-left">
+
+                    <div id="selecionar-todos"><span class="destaque">Selecionar</span></div>
+
+                    <div id="recarregar"><span class="destaque">Atualizar</span></div>
+
+                </div>
+
+                <div id="controles-right">
+
+                    <div id="informacao">
+                        <p>1-1 de 1</p>
+                    </div>
+
+                    <div id="voltar"><span class="destaque">Próximas</span></div>
+
+                    <div id="avancar"><span class="destaque">Anteriores</span></div>
+
+                </div>
+
+            </section>
+
+            <section id="emails"> <!-- Mensagens -->
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
 
 
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
 
+                    <div class="texto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores commodi laborum, numquam magni ad quae tempora amet necessitatibus fugiat qui similique alias ratione quas facilis quisquam. Voluptas, nulla quasi?
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>08:15</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita cumque architecto numquam iste? Facilis et repellendus quis voluptatibus, praesentium consequuntur dolorum error commodi ex perferendis vitae neque veritatis tempora. Perferendis!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>06:10</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere aliquam provident alias pariatur ab veniam? Eius, ex? Odio, suscipit magni mollitia inventore debitis, nostrum aliquam labore rerum unde, velit esse!
+                    </p>
+                </div>
+
+                    <div class="data"><h2>05:00</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quod minus modi odit molestiae iusto accusantium magni architecto in nam! Perferendis accusantium cumque nulla consequatur, sit quia. Laborum, eligendi explicabo.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>ontem</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate, molestiae ipsum molestias dolorem necessitatibus. Sunt maiores possimus officia in quaerat corporis temporibus dolore, praesentium repellat voluptate deserunt totam voluptates.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>12 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat quia expedita nulla distinctio, accusantium quibusdam, quaerat culpa nostrum vel eius laboriosam labore ratione perferendis facilis similique, reprehenderit nisi? Quas!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>12 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis corporis enim nihil deserunt facilis unde ipsum, perferendis voluptate animi sequi! Ea ut reprehenderit doloremque ab quas? Quisquam sit nulla sint?
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>12 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure veritatis sunt ipsa laudantium exercitationem tempore officiis ipsum. Rem vero non, nostrum blanditiis officiis aut assumenda dolorem impedit repudiandae, accusamus voluptatibus.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis officiis odio debitis modi libero! In doloribus animi, molestias nobis exercitationem vitae beatae recusandae nesciunt quo doloremque blanditiis dolorem quod possimus.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellat vero fuga, ipsa molestiae cumque minima incidunt nobis doloremque voluptatem amet non nemo porro? Debitis harum ab sed odio iusto!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>10 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, atque. Fuga magnam vero inventore necessitatibus eum ea corporis, culpa corrupti qui nihil ipsam earum amet exercitationem suscipit rem repellat et.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, numquam atque et, voluptate quasi, minima ex tenetur iusto accusantium quibusdam id quas quaerat temporibus neque exercitationem? Reiciendis nisi laboriosam voluptate?
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam voluptatum, nulla in, praesentium quas doloremque totam consequatur magnam soluta sit exercitationem iure hic, minima ducimus a nobis aliquid suscipit.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic itaque sapiente exercitationem magnam velit similique ipsum nostrum debitis, iusto, laboriosam corporis quam, autem dolorum dignissimos quod voluptas amet odit officiis!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aspernatur eligendi nesciunt perferendis. Ipsum consectetur aspernatur ipsa ut nihil quis. Inventore quisquam dicta eveniet tenetur soluta quaerat nobis quae nemo!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt consectetur itaque voluptas ipsum ratione nulla pariatur officia, atque impedit quis repellat. Facilis eaque impedit consequatur accusantium voluptatum a incidunt assumenda?
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>11 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eos sed dolor ipsam alias aperiam expedita quidem illo libero labore dolorem obcaecati neque, eveniet id rem aspernatur quos omnis? Veritatis.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>10 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, amet excepturi? Molestias laborum nam fugit error commodi ab, aperiam veniam, quas distinctio dolore est voluptate facilis neque, illo perspiciatis fugiat!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>10 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tenetur! Ipsam laborum ut maxime reprehenderit amet aliquam expedita ducimus voluptas animi adipisci, doloribus quod rerum! Repudiandae sint nisi inventore fuga!
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>8 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quam ratione excepturi maiores ut id. Maxime voluptate atque rem laboriosam nesciunt! Deserunt, impedit. Est aliquid saepe laudantium vero minima. Illum.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>8 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et odio eligendi eveniet vero! Voluptate minus, asperiores ut, reiciendis animi commodi, atque iste rem libero eaque soluta! Molestias aperiam doloribus incidunt.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>8 de fev.</h2></div>
+
+                </article>
+
+                <article class="mensagem">
+
+                    <div class="selecionar"><span class="destaque">Selecionar</span></div>
+
+                    <div class="estrela"><span class="destaque">Sem Estrela</span></div>
+
+                    <div class="importante"><span class="destaque">Marcar como Importante</span></div>
+
+
+                    <div class="titulo"><h1>Lorem Ipsum Dolor</h1></div>
+
+                    <div class="texto">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores assumenda, facere commodi quisquam deserunt architecto ab et quasi sit magnam quod, saepe velit unde mollitia repellendus, reiciendis minus? Dolore, eaque.
+                        </p>
+                    </div>
+
+                    <div class="data"><h2>8 de fev.</h2></div>
+
+                </article>
+                
             <footer id="rodape"> <!-- Rodapé da área de mensagens -->
-
+                <p>Desenvolvido por <a href="https://github.com/QueirozT">Tiago</a></p>
             </footer>
+
+            </section>
         </main>
 
     </main>
