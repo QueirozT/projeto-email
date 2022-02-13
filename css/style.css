@@ -246,7 +246,102 @@ html, body {
     grid-area: menu;
     transform: translate(0, -5vh);
 
-    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    padding: 0;
+    margin: 0;
+}
+#menu section {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    border-radius: 0 10px 10px 0;
+    padding: 5px 12px 5px 26px;
+
+    color: var(--cor-branco);
+}
+#menu section:hover {
+    background-color: var(--cor-fundo);
+    text-shadow: 1px 1px 2px var(--cor-preto);
+    
+    cursor: pointer;
+}
+
+#menu section p {
+    padding: 0;
+    margin: 0;
+}
+
+
+#menu #escrever {
+    padding: 5px 20px 5px 5px;
+    margin: 10px;
+    width: fit-content;
+
+    background-color: var(--cor-branco);
+
+    color: var(--cor-preto);
+
+    border-radius: 20px;
+}
+#menu #escrever::before{
+    content: url('https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png');
+    margin-right: 10px;
+}
+
+
+#entrada::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png');
+    padding-right: 20px;
+}
+#estrelas::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/grade_white_20dp.png');
+    padding-right: 20px;
+}
+#enviados::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/send_white_20dp.png');
+    padding-right: 20px;
+}
+#adiados::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/watch_later_white_20dp.png');
+    padding-right: 20px;
+}
+#rascunho::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_white_20dp.png');
+    padding-right: 20px;
+}
+#todos::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/mail_white_20dp.png');
+    padding-right: 20px;
+}
+#spam::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/report_white_20dp.png');
+    padding-right: 20px;
+}
+#lixeira::before {
+    content: url('https://www.gstatic.com/images/icons/material/system/1x/delete_white_20dp.png');
+    padding-right: 20px;
+}
+
+
+.descricao{
+    position: absolute;
+    right: 0;
+    transform: translate(100%, 0);
+
+    padding: 4px 5px;
+    background: var(--cor-fundo);
+    font-size: .8rem;
+
+    opacity: 0;
+}
+#menu section:hover .descricao {
+    opacity: 1;
+    transition: .8s;
 }
 
 
