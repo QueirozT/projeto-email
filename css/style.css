@@ -151,6 +151,11 @@ html, body {
 
     fill: var(--cor-pardo);
 }
+.left svg:hover {
+    background-color: var(--cor-fundo);
+
+    cursor: pointer;
+}
 
 .left img {
     height: 4vh;
@@ -177,6 +182,8 @@ html, body {
     background-color: var(--cor-fundo);
     
     color: var(--cor-branco);
+
+    cursor: pointer;
 }
 
 .center #buscar:focus {
@@ -184,17 +191,29 @@ html, body {
     color: var(--cor-preto);
 
     outline: none;
+
+    cursor: text;
 }
 .center #buscar:focus ~ svg{
     fill: var(--cor-preto);
 }
 
 .center svg {
-    height: 2vh;
-    padding: 5px;
     position: absolute;
+    height: 2vh;
+    width: 1vw;
+
+    padding: 5px;
+    margin: 2px;
+    border-radius: 50%;
 
     fill: var(--cor-pardo);
+
+    pointer-events: none;
+}
+.center svg:hover {
+    background-color: var(--cor-fundo);
+    fill: var(--cor-preto);
 }
 
 
@@ -213,6 +232,11 @@ html, body {
     border-radius: 50%;
 
     background-color: var(--cor-pardo);
+}
+.right img:hover {
+    background-color: var(--cor-fundo);
+
+    cursor: pointer;
 }
 
 
