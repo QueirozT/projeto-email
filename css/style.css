@@ -707,3 +707,260 @@ footer p, a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+@media (max-width: 1024px) {
+    html{
+        font-size: 60.2%;
+    }
+
+    #browser {
+        width: 90vw;
+        height: 90vh;
+
+        display: grid;
+        grid-template-columns: 6vw 84vw;
+        grid-template-rows: 5vh 5vh 85vh;
+        grid-template-areas: "bar bar" "cabecalho cabecalho" "menu conteudo";
+    }
+
+    #menu #escrever {
+        padding: 5px;
+        margin: 10;
+
+        background: url('https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png') center center no-repeat;
+        background-size: 30px;
+        background-color: var(--cor-branco);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 34px;
+        height: 32px;
+
+        border-radius: 50%;
+    }
+    #menu #escrever::before {
+        content: none;
+    }
+    #menu #escrever p{
+        display: none;
+    }
+        
+    #entrada p {
+        display: none;
+    }
+    #estrelas p {
+        display: none;
+    }
+    #enviados p {
+        display: none;
+    }
+    #adiados p {
+        display: none;
+    }
+    #rascunho p {
+        display: none;
+    }
+    #todos p {
+        display: none;
+    }
+    #spam p {
+        display: none;
+    }
+    #lixeira p {
+        display: none;
+    }
+
+    #conteudo {
+        display: grid;
+        grid-template-columns: 85vw;
+        grid-template-rows: 5vh 80vh;
+        grid-template-areas: "controles" "mensagens";
+    }
+
+    #emails {
+        width: 85vw;
+        min-height: 80vh;
+        overflow: hidden auto;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #emails .mensagem {
+        height: 4vh;
+    
+        display: grid;
+        grid-template-columns: 2vw 2vw 2vw 10vw 60vw 5vw;
+        grid-template-areas: "selecionar estrela importante titulo texto data";
+    
+        align-items: center;
+        text-align: left;
+    
+        background-color: var(--cor-fundo-branco);
+    }
+
+    #emails .titulo h1 {
+        font-size: .8rem;
+        color: var(--cor-preto);
+        text-align: center;
+        
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .left svg {
+        display: none;
+    }
+    
+    .center #buscar {
+        width: 60vw;
+        height: 4vh;
+    }
+}
+
+@media (max-width: 900px) {
+    #menu {
+        display: none;
+    }
+
+    #browser {
+        width: 90vw;
+        height: 90vh;
+
+        display: grid;
+        grid-template-columns: 90vw;
+        grid-template-rows: 5vh 5vh 85vh;
+        grid-template-areas: "bar" "cabecalho" "conteudo";
+    }
+
+    #conteudo {
+        display: grid;
+        grid-template-columns: 90vw;
+        grid-template-rows: 85vh;
+        grid-template-areas: "mensagens";
+    }
+
+    #emails {
+        width: 90vw;
+        min-height: 80vh;
+        overflow: hidden auto;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #emails .mensagem {
+        height: 8vh;
+    
+        display: grid;
+        grid-template-columns: 10vw 70vw 10vw;
+        grid-template-areas: "foto titulo titulo" "foto texto data";
+    
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+
+        padding-bottom: 30px;
+    }
+    #emails .mensagem:hover {
+        background-color: var(--cor-branco);
+    }
+
+    .foto {
+        background: skyblue;
+
+        transform: translate(0, 1vh);
+        
+        align-self: center;
+        justify-self: right;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .foto::before {
+        content: "L";
+        font-size: 2rem;
+    }
+
+    #emails .importante{
+        display: none;
+    }
+    #emails .selecionar {
+        display: none;
+    }
+    #emails .estrela {
+        display: none;
+    }
+
+
+    #emails .titulo {
+        grid-area: titulo;
+    
+        justify-self: left;
+        
+        padding: 0 10px;
+    }
+    #emails .titulo h1 {
+        font-size: 2rem;
+    }
+    
+    #emails .texto {
+        grid-area: texto;
+        
+        padding: 0 10px;
+    
+        display: grid;
+        grid-template-columns: 99% 1%;
+        grid-template-areas: "before after";
+    
+        align-items: center;
+    }
+    #emails .texto p {
+        grid-area: before;
+        font-size: 1.5rem;
+    }
+    #emails .texto::after {
+        grid-area: after;
+        content: '...';
+    }
+    
+    #emails .data {
+        grid-area: data;
+    
+        padding: 0 10px;
+        overflow: hidden;
+    }
+    #emails .data h2 {
+        font-size: 1rem;
+        color: var(--cor-preto);
+        padding-right: 5px;
+    }
+
+    .center #buscar {
+        width: 50vw;
+        height: 4vh;
+    }
+
+    #cabecalho .center {
+        width: 50vw;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left img {
+        height: 3vh;
+    }
+}
