@@ -859,7 +859,7 @@ footer a:hover {
         height: 8vh;
     
         display: grid;
-        grid-template-columns: 10vw 60vw 10vw;
+        grid-template-columns: 10vw 58vw 12vw;
         grid-template-areas: "foto titulo titulo" "foto texto data";
     
         align-items: left;
@@ -929,6 +929,9 @@ footer a:hover {
     #emails .texto p {
         grid-area: before;
         font-size: 1.5rem;
+    
+        overflow: hidden;
+        white-space: nowrap;
     }
     #emails .texto::after {
         grid-area: after;
@@ -938,6 +941,9 @@ footer a:hover {
     #emails .data {
         grid-area: data;
     
+        align-self: center;
+        justify-self: center;
+
         padding: 0 10px;
         overflow: hidden;
     }
