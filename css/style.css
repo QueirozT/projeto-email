@@ -971,4 +971,8 @@ footer a:hover {
     .left img {
         height: 3vh;
     }
+
+    .center svg {
+        display: none;
+    }
 }
