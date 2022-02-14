@@ -859,7 +859,7 @@ footer a:hover {
         height: 8vh;
     
         display: grid;
-        grid-template-columns: 10vw 70vw 10vw;
+        grid-template-columns: 10vw 60vw 10vw;
         grid-template-areas: "foto titulo titulo" "foto texto data";
     
         align-items: left;
