@@ -937,7 +937,7 @@ footer a:hover {
     }
     #emails .texto::after {
         grid-area: after;
-        content: '...';
+        content: '&hellip;';
     }
     
     #emails .data {
