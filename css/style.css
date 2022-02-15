@@ -748,6 +748,14 @@ footer a:hover {
     #menu #escrever p{
         display: none;
     }
+
+    #menu section {
+        margin-right: 0;
+    }
+    .descricao {
+        right: 0;
+        white-space: nowrap;
+    }
         
     #entrada p {
         display: none;
@@ -983,8 +991,10 @@ main#browser {
     opacity: 0;
 
     z-index: 1;
+}
 
-    animation: exibir 1s ease 10s 1 both;
+.browserLoad {
+    animation: exibir 1s ease 1 both;
 }
 
 @keyframes exibir {
@@ -994,6 +1004,7 @@ main#browser {
     }
 }
 
+
 div#animacao {
     position: absolute;
 
@@ -1002,9 +1013,11 @@ div#animacao {
 
     opacity: 1;
 
-    animation: finish 1s ease 10s 1 both;
-
     z-index: 2;
+}
+
+.animUnload {
+    animation: finish 1s ease 1 both;
 }
 
 @keyframes finish{
