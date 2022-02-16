@@ -1219,3 +1219,10 @@ select {
   color: #000;
   padding: 20px;
 }
+
+
+/* interações */
+
+.hidden {
+    display: none;
+}
