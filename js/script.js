@@ -16,6 +16,7 @@ setTimeout(() => {
 }, 6000 + timeLoad)
 
 
+
 // Barra de Pesquisa.
 
 document.addEventListener('input', () => {
@@ -45,6 +46,7 @@ document.addEventListener('input', () => {
 })
 
 
+
 // Script de Seleção das mensagens.
 
 let selecionarTodas = document.querySelector('#selecionar-todos')
@@ -57,15 +59,18 @@ document.addEventListener('click', (e) => {
 
     target = e.target
     
+
     // Selecionar Todas
     if (target == selecionarTodas) {    
         
         if (!target.classList.contains('selecionados')) {
             
             target.classList.add('selecionados')
+            target.classList.remove('parcialmenteSelecionados')
         } else {
             
             target.classList.remove('selecionados')
+            target.classList.remove('parcialmenteSelecionados')
         }
 
         todas.forEach((e) => {
@@ -83,18 +88,59 @@ document.addEventListener('click', (e) => {
     }
 
 
-
     // Selecionar Uma
     if (target.classList.contains('selecionar')) {
 
         if (!target.classList.contains('selecionado')) {
 
-            // console.log(`Clicado e Adicionado no Bloco de Seleção ${target}`)
             target.classList.add('selecionado')
+            
+            checar()
         } else {
 
-            // console.log(`Clicado e Removido no Bloco de Seleção ${target}`)
             target.classList.remove('selecionado')
+            
+            checar()
         }
     }
 })
+
+
+
+// Logica da seleção
+function checar() {
+        
+    let totalSelecionado = 0;
+
+    todas.forEach((e) => {
+        
+        if (e.classList.contains('selecionado')){
+            totalSelecionado ++
+        }
+    })
+
+    if (todas.length == totalSelecionado) {
+
+        console.log('todas selecionadas')
+
+        selecionarTodas.classList.add('selecionados')
+        selecionarTodas.classList.remove('parcialmenteSelecionados')
+
+        todas.forEach((e) => {
+            e.classList.add('todosSelecionados')
+        })
+    } else if (totalSelecionado == 0) {
+        
+        console.log('nenhuma selecionada')
+
+        selecionarTodas.classList.remove('selecionados')
+        selecionarTodas.classList.remove('parcialmenteSelecionados')
+
+        todas.forEach((e)=>{
+            e.classList.remove('todosSelecionados')
+        })
+    } else {
+        console.log('parcialmente selecionado')
+        selecionarTodas.classList.add('parcialmenteSelecionados')
+    }
+}

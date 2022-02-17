@@ -401,6 +401,8 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
+
+    transition: .5s;
 }
 
 #recarregar {
@@ -559,6 +561,8 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
+
+    transition: .5s;
 }
 #emails .selecionar:hover {
     background-color: var(--cor-fundo);
@@ -1235,7 +1239,7 @@ select {
     background-repeat: no-repeat;
     background-size: 20px;
 
-    transition: 1s;
+    transition: .5s;
 }
 
 
@@ -1245,5 +1249,14 @@ select {
     background-repeat: no-repeat;
     background-size: 20px;
 
-    transition: 1s;
+    transition: .5s;
+}
+
+.parcialmenteSelecionados {
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/indeterminate_check_box_white_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    transition: .5s;
 }
