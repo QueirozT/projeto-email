@@ -391,15 +391,16 @@ html, body {
     margin: 0 10px;
     padding: 5px;
     border-radius: 50%;
-
-    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_white_20dp.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px;
 }
 #selecionar-todos:hover {
     background-color: var(--cor-fundo);
     cursor: pointer;
+}
+.selecionar-todos {
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_white_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
 }
 
 #recarregar {
@@ -1225,4 +1226,24 @@ select {
 
 .hidden {
     display: none;
+}
+
+
+#emails .selecionado {
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/check_box_black_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    transition: 1s;
+}
+
+
+.selecionados {
+    background-image: url(https://www.gstatic.com/images/icons/material/system/1x/check_box_white_20dp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    transition: 1s;
 }

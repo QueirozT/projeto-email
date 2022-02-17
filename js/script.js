@@ -1,4 +1,5 @@
 // Load da página
+
 var timeLoad = 0;
 
 window.onload = timeLoad = performance.now()
@@ -44,3 +45,56 @@ document.addEventListener('input', () => {
 })
 
 
+// Script de Seleção das mensagens.
+
+let selecionarTodas = document.querySelector('#selecionar-todos')
+
+let todas = document.querySelectorAll('.selecionar')
+
+let target;
+
+document.addEventListener('click', (e) => {
+
+    target = e.target
+    
+    // Selecionar Todas
+    if (target == selecionarTodas) {    
+        
+        if (!target.classList.contains('selecionados')) {
+            
+            target.classList.add('selecionados')
+        } else {
+            
+            target.classList.remove('selecionados')
+        }
+
+        todas.forEach((e) => {
+
+            if (!e.classList.contains('todosSelecionados')) {
+
+                e.classList.add('todosSelecionados')
+                e.classList.add('selecionado')
+            } else {
+
+                e.classList.remove('todosSelecionados')
+                e.classList.remove('selecionado')
+            }        
+        })
+    }
+
+
+
+    // Selecionar Uma
+    if (target.classList.contains('selecionar')) {
+
+        if (!target.classList.contains('selecionado')) {
+
+            // console.log(`Clicado e Adicionado no Bloco de Seleção ${target}`)
+            target.classList.add('selecionado')
+        } else {
+
+            // console.log(`Clicado e Removido no Bloco de Seleção ${target}`)
+            target.classList.remove('selecionado')
+        }
+    }
+})
