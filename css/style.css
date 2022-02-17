@@ -952,10 +952,6 @@ footer a:hover {
         overflow: hidden;
         white-space: nowrap;
     }
-    #emails .texto::after {
-        grid-area: after;
-        content: '&hellip;';
-    }
     
     #emails .data {
         grid-area: data;
