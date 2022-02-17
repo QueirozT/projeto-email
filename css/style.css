@@ -336,7 +336,7 @@ html, body {
     transform: translate(100%, 0);
 
     padding: 4px 5px;
-    background: var(--cor-destaque);
+    background: var(--cor-cinza2);
     font-size: .8rem;
 
     pointer-events: none;
@@ -429,7 +429,7 @@ html, body {
     transform: translate(-25%, 150%);
 
     padding: 4px 5px;
-    background: var(--cor-destaque);
+    background: var(--cor-cinza2);
     color: var(--cor-branco);
     font-size: .8rem;
 
@@ -501,7 +501,7 @@ html, body {
     transform: translate(-50%, 150%);
 
     padding: 4px 5px;
-    background: var(--cor-destaque);
+    background: var(--cor-cinza2);
     color: var(--cor-branco);
     font-size: .8rem;
 
@@ -584,6 +584,8 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
+
+    transition: .5s;
 }
 #emails .estrela:hover {
     background-color: var(--cor-fundo);
@@ -605,6 +607,8 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
+
+    transition: .5s;
 }
 #emails .importante:hover {
     background-color: var(--cor-fundo);
@@ -673,7 +677,7 @@ html, body {
     transform: translate(-25%, 150%);
 
     padding: 4px 5px;
-    background: var(--cor-destaque);
+    background: var(--cor-cinza2);
     color: var(--cor-branco);
     font-size: .8rem;
 
@@ -1226,12 +1230,8 @@ select {
 }
 
 
+
 /* interações */
-
-.hidden {
-    display: none;
-}
-
 
 #emails .selecionado {
     background-image: url(https://www.gstatic.com/images/icons/material/system/1x/check_box_black_20dp.png);
@@ -1259,4 +1259,40 @@ select {
     background-size: 20px;
 
     transition: .5s;
+}
+
+
+#emails .estrelaMarcada {
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/star_googyellow500_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    transition: .5s;
+}
+
+
+.contagem::after {
+    content: attr(data-content);
+
+    right: 30px;
+    position: absolute;
+
+    font-size: .8rem;
+}
+
+
+#emails .importanteMarcado {
+    
+    background-image: url('https://www.gstatic.com/images/icons/material/system/1x/label_important_googyellow500_20dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    transition: .5s;
+}
+
+
+#emails .marcado {
+    background-color: var(--cor-branco);
 }
