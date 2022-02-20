@@ -57,6 +57,8 @@ let selecionarTodas = document.querySelector('#selecionar-todos')
 
 let todas = document.querySelectorAll('.selecionar')
 
+let mensagens = document.querySelectorAll('.mensagem')
+
 let target;
 
 document.addEventListener('click', (e) => {
@@ -144,6 +146,19 @@ document.addEventListener('click', (e) => {
             filho.innerText = 'Sem Estrela'
 
             checarEstrelas()
+
+            mensagens.forEach((e) => {   
+                if (e.hasAttribute('style')) {
+                    
+                    mostrarEstrelas()
+                }
+            })
+
+
+            if (quantidade(mensagens) == 0) {
+
+                mostrarMensagens()
+            }
         }
     }
 
@@ -166,7 +181,27 @@ document.addEventListener('click', (e) => {
             filho.innerText = 'Marcar como Importante'
         }
     }
+
+
+    
+    /* === Navegação === */
+
+    // com estrelas
+    if  (target.hasAttribute('id') && target.innerHTML.includes("estrelas")) {
+
+        if (quantidade(mensagens) > 0) {
+
+            mostrarEstrelas()
+        }
+    }
+
+    // caixa de entrada
+    if  (target.hasAttribute('id') && target.innerHTML.includes("entrada")) {
+        
+        mostrarMensagens()
+    }
 })
+
 
 
 
@@ -235,6 +270,33 @@ function checarEstrelas() {
 
 }
 
+function mostrarEstrelas() {
+    mensagens.forEach((e) => {
+        if (!e.children[1].classList.contains('estrelaMarcada')) {
+            e.style.display = "none"
+        }
+    })
+}
+
+function mostrarMensagens() {
+    mensagens.forEach((e) => {
+        e.removeAttribute('style') 
+    })
+}
+
+function quantidade(seletor) {
+    let quantidade = 0;
+    
+    seletor.forEach((e) => {
+        
+        if (e.children[1].classList.contains('estrelaMarcada')) {
+            quantidade ++
+        }
+    })
+
+    return quantidade;
+}
+
 
 
 // Quantidade de Emails
@@ -244,7 +306,7 @@ quantidadeDeEmails()
 function quantidadeDeEmails() {
     let emails = document.querySelector('#emails')
 
-    let mensagens = document.querySelectorAll('.mensagem')
+    mensagens = document.querySelectorAll('.mensagem')
 
     let informacao = document.querySelector('#informacao p')
 
