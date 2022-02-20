@@ -621,12 +621,15 @@ html, body {
 
     padding: 0 10px;
     overflow: hidden;
+
+    pointer-events: none;
 }
 #emails .titulo h1 {
     font-size: .8rem;
     color: var(--cor-preto);
     
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
@@ -642,6 +645,8 @@ html, body {
     grid-template-areas: "before after";
 
     align-items: center;
+
+    pointer-events: none;
 }
 #emails .texto p {
     grid-area: before;
@@ -649,11 +654,8 @@ html, body {
     color: var(--cor-preto);
 
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
-}
-#emails .texto::after {
-    grid-area: after;
-    content: '...';
 }
 
 /* data da mensagem */
