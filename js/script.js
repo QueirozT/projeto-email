@@ -80,7 +80,6 @@ document.addEventListener('click', (e) => {
         }
 
         todas.forEach((e) => {
-
             
             let pai = e.parentElement;
 
