@@ -145,15 +145,15 @@ document.addEventListener('click', (e) => {
             let filho = target.childNodes[0]
             filho.innerText = 'Sem Estrela'
 
+
             checarEstrelas()
 
-            mensagens.forEach((e) => {   
-                if (e.hasAttribute('style')) {
-                    
-                    mostrarEstrelas()
-                }
-            })
 
+            let marcar = document.querySelector('#estrelas')
+
+            if (marcar.classList.contains('abaEstrelas')) {
+                mostrarEstrelas()
+            }
 
             if (quantidade(mensagens) == 0) {
 
@@ -161,6 +161,8 @@ document.addEventListener('click', (e) => {
             }
         }
     }
+
+    console.log(target)
 
 
 
@@ -187,18 +189,31 @@ document.addEventListener('click', (e) => {
     /* === Navegação === */
 
     // com estrelas
-    if  (target.hasAttribute('id') && target.innerHTML.includes("estrelas")) {
+    let comEstrelas = document.querySelector('#estrelas')
+    if  (target == comEstrelas) {
+
+        let marcar = document.querySelector('#estrelas')
+        marcar.classList.add('abaEstrelas')
 
         if (quantidade(mensagens) > 0) {
 
             mostrarEstrelas()
         }
+
+        console.log('todas as estrelas')
     }
 
     // caixa de entrada
-    if  (target.hasAttribute('id') && target.innerHTML.includes("entrada")) {
+    let caixaDeEntrada = document.querySelector('#entrada')
+    let todasAsMensagens = document.querySelector('#todos')
+    if  (target == caixaDeEntrada || target == todasAsMensagens) {
         
+        let marcar = document.querySelector('#estrelas')
+        marcar.classList.remove('abaEstrelas')
+
         mostrarMensagens()
+
+        console.log('todas as mensagens')
     }
 })
 
@@ -248,7 +263,6 @@ function checarEstrelas() {
 
     let exibirComEstrelas = document.querySelector('#estrelas')
 
-
     let estrelasSelecionadas = 0;
 
     todasEstrelas.forEach((e) => {
@@ -280,7 +294,7 @@ function mostrarEstrelas() {
 
 function mostrarMensagens() {
     mensagens.forEach((e) => {
-        e.removeAttribute('style') 
+        e.removeAttribute('style')
     })
 }
 
@@ -290,6 +304,7 @@ function quantidade(seletor) {
     seletor.forEach((e) => {
         
         if (e.children[1].classList.contains('estrelaMarcada')) {
+            
             quantidade ++
         }
     })
