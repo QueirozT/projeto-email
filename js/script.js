@@ -94,7 +94,6 @@ document.addEventListener('click', (e) => {
 
                 e.classList.remove('todosSelecionados')
                 e.classList.remove('selecionado')
-
                 
                 pai.classList.remove('marcado')
             }        
