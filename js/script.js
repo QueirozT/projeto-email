@@ -163,8 +163,6 @@ document.addEventListener('click', (e) => {
         }
     }
 
-    console.log(target)
-
 
 
     // Marcar Importante
