@@ -57,6 +57,8 @@ let selecionarTodas = document.querySelector('#selecionar-todos')
 
 let todas = document.querySelectorAll('.selecionar')
 
+let mensagens = document.querySelectorAll('.mensagem')
+
 let target;
 
 document.addEventListener('click', (e) => {
@@ -78,7 +80,6 @@ document.addEventListener('click', (e) => {
         }
 
         todas.forEach((e) => {
-
             
             let pai = e.parentElement;
 
@@ -93,7 +94,6 @@ document.addEventListener('click', (e) => {
 
                 e.classList.remove('todosSelecionados')
                 e.classList.remove('selecionado')
-
                 
                 pai.classList.remove('marcado')
             }        
@@ -143,7 +143,21 @@ document.addEventListener('click', (e) => {
             let filho = target.childNodes[0]
             filho.innerText = 'Sem Estrela'
 
+
             checarEstrelas()
+
+
+            let marcar = document.querySelector('#estrelas')
+            if (marcar.classList.contains('abaEstrelas')) {
+                
+                if (quantidade(mensagens) > 0) {
+                    
+                    mostrarEstrelas()
+                }else {
+
+                    mostrarMensagens()
+                }
+            }
         }
     }
 
@@ -166,7 +180,30 @@ document.addEventListener('click', (e) => {
             filho.innerText = 'Marcar como Importante'
         }
     }
+
+
+    
+    /* === Navegação === */
+
+    // com estrelas
+    let comEstrelas = document.querySelector('#estrelas')
+    if  (target == comEstrelas) {
+
+        if (quantidade(mensagens) > 0) {
+
+            mostrarEstrelas()
+        }
+    }
+
+    // caixa de entrada
+    let caixaDeEntrada = document.querySelector('#entrada')
+    let todasAsMensagens = document.querySelector('#todos')
+    if  (target == caixaDeEntrada || target == todasAsMensagens) {
+
+        mostrarMensagens()
+    }
 })
+
 
 
 
@@ -213,7 +250,6 @@ function checarEstrelas() {
 
     let exibirComEstrelas = document.querySelector('#estrelas')
 
-
     let estrelasSelecionadas = 0;
 
     todasEstrelas.forEach((e) => {
@@ -230,9 +266,45 @@ function checarEstrelas() {
         exibirComEstrelas.setAttribute('data-content', `${Number(estrelasSelecionadas)}`)
     } else {
 
+        exibirComEstrelas.setAttribute('data-content', `${Number(estrelasSelecionadas)}`)
+
         exibirComEstrelas.classList.remove('contagem')
     }
+}
 
+function mostrarEstrelas() {
+    mensagens.forEach((e) => {
+        if (!e.children[1].classList.contains('estrelaMarcada')) {
+            
+            e.setAttribute('style', 'display: none')
+        }
+    })
+
+    let marcar = document.querySelector('#estrelas')
+    marcar.classList.add('abaEstrelas')
+}
+
+function mostrarMensagens() {
+    mensagens.forEach((e) => {
+        e.removeAttribute('style')
+    })
+
+    let marcar = document.querySelector('#estrelas')
+    marcar.classList.remove('abaEstrelas')
+}
+
+function quantidade(seletor) {
+    let quantidade = 0;
+    
+    seletor.forEach((e) => {
+        
+        if (e.children[1].classList.contains('estrelaMarcada')) {
+            
+            quantidade ++
+        }
+    })
+
+    return quantidade;
 }
 
 
@@ -244,7 +316,7 @@ quantidadeDeEmails()
 function quantidadeDeEmails() {
     let emails = document.querySelector('#emails')
 
-    let mensagens = document.querySelectorAll('.mensagem')
+    mensagens = document.querySelectorAll('.mensagem')
 
     let informacao = document.querySelector('#informacao p')
 
