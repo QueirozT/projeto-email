@@ -279,9 +279,10 @@ function checarEstrelas() {
         exibirComEstrelas.setAttribute('data-content', `${Number(estrelasSelecionadas)}`)
     } else {
 
+        exibirComEstrelas.setAttribute('data-content', `${Number(estrelasSelecionadas)}`)
+
         exibirComEstrelas.classList.remove('contagem')
     }
-
 }
 
 function mostrarEstrelas() {
