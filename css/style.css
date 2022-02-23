@@ -233,10 +233,10 @@ html, body {
     margin: 15px;
     border-radius: 50%;
 
-    background-color: var(--cor-pardo);
+    background-color: var(--cor-fundo);
 }
 .right img:hover {
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-pardo);
 
     cursor: pointer;
 }
@@ -856,6 +856,8 @@ footer a:hover {
         grid-template-columns: 90vw;
         grid-template-rows: 5vh 5vh 85vh;
         grid-template-areas: "bar" "cabecalho" "conteudo";
+    
+        background: white;
     }
 
     #conteudo {
@@ -879,19 +881,21 @@ footer a:hover {
         height: 8vh;
     
         display: grid;
-        grid-template-columns: 10vw 58vw 12vw;
+        grid-template-columns: 13vw 63vw 12vw;
         grid-template-areas: "foto titulo titulo" "foto texto data";
     
         align-items: left;
         justify-content: left;
         text-align: left;
 
-        box-shadow: 0px 0px 4px var(--cor-branco);
-
         padding-bottom: 30px;
+
+        border-radius: 20px;
     }
     #emails .mensagem:hover {
-        background-color: var(--cor-branco);
+        background-color: var(--cor-pardo);
+
+        box-shadow: 0px 0px 4px var(--cor-preto);
     }
 
     .foto {
@@ -974,6 +978,21 @@ footer a:hover {
     .center #buscar {
         width: 50vw;
         height: 4vh;
+    
+        background-color: var(--cor-fundo);
+        
+        color: var(--cor-preto);
+    
+        cursor: pointer;
+    }
+    
+    .center #buscar:focus {
+        background-color: var(--cor-branco);
+        color: var(--cor-preto);
+    
+        outline: none;
+    
+        cursor: text;
     }
 
     #cabecalho .center {
@@ -985,11 +1004,34 @@ footer a:hover {
     }
 
     .left img {
+        display: none;
+    }
+
+    .left svg {
         height: 3vh;
+
+        display: block;
+    
+        margin: 10px;
+        padding: 5px;
+        border-radius: 50%;
+    
+        fill: var(--cor-preto);
+    }
+    .left svg:hover {
+        background-color: var(--cor-destaque);
+    
+        cursor: pointer;
     }
 
     .center svg {
         display: none;
+    }
+
+    footer p, a {
+        color: var(--cor-preto);
+        font-weight: normal;
+        text-shadow: none;
     }
 }
 
