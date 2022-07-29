@@ -532,6 +532,7 @@ html, body {
 /* Configuração individual das mensagens */
 #emails .mensagem {
     height: 4vh;
+    min-height: 40px;
 
     display: grid;
     grid-template-columns: 2vw 2vw 2vw 10vw 44vw 5vw;
